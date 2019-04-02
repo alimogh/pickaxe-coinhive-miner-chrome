@@ -1,6 +1,6 @@
 /* global chrome:true window:true */
-import App from '../../src/App.js';
-import Storage from '../../src/Storage.js';
+import App from '../../src/App';
+import Storage from '../../src/Storage';
 
 const app = new App();
 
@@ -14,5 +14,3 @@ window.addEventListener('offline', () => app.run());
 
 // Menu icon clicks.
 chrome.browserAction.onClicked.addListener(() => app.toggle());
-
-chrome.runtime.onInstalled.addListener(() => chrome.runtime.openOptionsPage());
